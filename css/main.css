@@ -1,0 +1,19 @@
+.box{
+	background: white;
+	width:100px;
+	height:100px;
+	display:inline-block;
+	border:1px solid black;
+	border-radius:8px;
+	margin-top: 5px;
+	padding-top: 30px;
+}
+.barra{
+	text-align:center;
+}
+.contenedor-box{
+	text-align: center;
+}
+button{
+  margin-top:12px;
+}
