@@ -1,65 +1,66 @@
 $(document).ready(function(){
-	var cont=0
-		$(".boton").click(function(){
-		cont+=1
-		if(cont%2){
-				$(this).text("x");
-				$(this).off("click");
-					var resultado = validar("x");
-					if (cont==9){
-						if(resultado==false) {
-							alert("perdio");
-						}
-					}
-				}else{
-					$(this).text("o");
-					$(this).off("click")
-					var resultado = validar("o");
-					if (cont==9){
-						if(resultado==false) {
-							alert("perdio");
-						}
-					}	
-
-				}
+  $(".box").click(funcionar);
+  $("#reinicio").click(reiniciar);
 });
 
+function validar (value){
 
-// function validar(valor){
-// 	var btn1=$("#bt1").text()
-//     var btn2=$("#bt2").text()
-//     var btn3=$("#bt3").text()
-//     var btn4=$("#bt4").text()
-//     var btn5=$("#bt5").text()
-//     var btn6=$("#bt6").text()
-//     var btn7=$("#bt7").text()
-//     var btn8=$("#bt8").text()
-//     var btn9=$("#bt9").text()
-//     var ganador = true;
-//     if(btn1==btn2 && btn1==btn3 && btn1  == valor){
-//     	alert("gano")
-//     }else if(btn1==btn4 && btn1==btn7 && btn1 == valor){
-//     	alert("gano")
-//     }else if(btn1==btn5 && btn1==btn9 && btn1 == valor){
-//     	alert("gano")
-//     }else if(btn2==btn5 && btn2==btn8 && btn2 == valor){
-//     	alert("gano")
-//     }else if(btn3==btn6 && btn3==btn9 && btn3 == valor){
-//     	alert("gano")
-//     }else if(btn7==btn8 && btn7==btn9 && btn7 == valor){
-//     	alert("gano")
-//     }else if(btn3==btn5 && btn3==btn7 && btn3 == valor){
-//     	alert("gano")
-//     }else if(btn4==btn5 && btn4==btn6 && btn4 == valor){
-//     	alert("gano")
-//     }else{
-//     	ganador = false;
-//     }
-//     return ganador;
-// }
-    
-// });
+    var uno=$("#1").text()
+    var dos=$("#2").text()
+    var tres=$("#3").text()
+    var cuatro=$("#4").text()
+    var cinco=$("#5").text()
+    var seis=$("#6").text()
+    var siete=$("#7").text()
+    var ocho=$("#8").text()
+    var nueve=$("#9").text()
 
+    var ganador = true;
 
+    if(uno==dos && uno==tres && uno == value){
+    	alert("GANASTE ESTA PARTIDA!")
+    }else if(uno==cuatro && uno==siete && uno == value){
+    	alert("GANASTE ESTA PARTIDA!")
+    }else if(uno==cinco && uno==nueve && uno == value){
+    	alert("GANASTE ESTA PARTIDA!")
+    }else if(dos==cinco && dos==ocho && dos == value){
+    	alert("GANASTE ESTA PARTIDA!")
+    }else if(tres==seis && tres==nueve && tres == value){
+    	alert("GANASTE ESTA PARTIDA!")
+    }else if(siete==ocho && siete==nueve && siete == value){
+    	alert("GANASTE ESTA PARTIDA!")
+    }else if(tres==cinco && tres==siete && tres == value){
+    	alert("GANASTE ESTA PARTIDA!")
+    }else if(cuatro==cinco && cuatro==seis && cuatro == value){
+    	alert("GANASTE ESTA PARTIDA!")
+    }else{
+    	ganador = false;
+    }
+    return ganador;
+}
 
+var contador=0;
+var resultado;
+function funcionar (){
+    contador+=1;
+    if (contador%2){
+    $(this).text("x");
+    resultado=play("x");
 
+    }else{
+    $(this).text("o");
+    resultado=play("o");
+   }
+
+}
+function reiniciar (){
+    $("#1").text("+")
+    $("#2").text("+")
+    $("#3").text("+")
+    $("#4").text("+")
+    $("#5").text("+")
+    $("#6").text("+")
+    $("#7").text("+")
+    $("#8").text("+")
+    $("#9").text("+")
+}
